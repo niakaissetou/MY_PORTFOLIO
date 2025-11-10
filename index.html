@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <nav class="navigation">
@@ -14,17 +15,19 @@
             <a href="#about">À PROPOS</a>
             <a href="#projects">PROJETS</a>
             <a href="#contact">CONTACTS</a>
-        </div>  
+        </div> 
+        <button id="play_music">Un peu de musique ?</button>
+        <audio autoplay id="tomodachi">
+            <source src="song/Map (Day) - Tomodachi Life OST.mp3" type="audio/mp3">
+        </audio>
     </nav>
-    <!-- <div class="presentation_perso"> -->
         <section id="home" class="presentation_perso">
             <p>BONJOUR, JE SUIS <b>AÏSSETOU NIAKATÉ.</b><br>UNE DÉVELOPPEUSE EN FORMATION,<br> À LA RECHERCHE D'UN STAGE !</p>
             <div class="floating">
                 <img src="img/MONOGRAMME.png" alt="MONOGRAMME" class="mon_logo">
             </div>
         </section>
-    <!-- </div> -->
-    <button class="resume_button">MON CV !</button>
+    <button class="resume_button" onclick="open_pdf()">MON CV !</button>
     <div class="line_deco">
         <img src="img/symbole.png" alt="symbole" class="deco">
         <img src="img/symbole.png" alt="symbole" class="deco">
@@ -37,33 +40,66 @@
 
     </div>
     <main>
-        <section>
+        <section id="epreuve">
             <h1>ÉPREUVE ORALE E5 :</h1>
-            <p>explication orale E5</p>
-        </section>
+            <p>Étant actuellement étudiante en <b>BTS SIO</b>, je dois réaliser un oral, <b>l'épreuve E5</b>. Cette épreuve consiste à <b>évaluer</b> mes <b>compétences professionnelles</b> 
+                acquises durant ma formation, mes stages et mes projets. 
+                Elle dure environ quarante minutes et se déroule en deux grandes parties.
+                <br><br>Dans un premier temps, je présente mon parcours, mon rôle en entreprise et les différentes missions que j'ai pu effectuer. 
+                Ensuite, je dois détailler deux réalisations professionnelles que j'ai choisies, en expliquant le contexte, les objectifs, les outils utilisés et les compétences mobilisées.
+                Le jury me pose ensuite des questions pour vérifier ma compréhension des situations professionnelles, 
+                mes choix techniques et ma capacité à m'adapter aux besoins d'une organisation.
+                <br><br><b>L'objectif</b> de cette épreuve est de <b>montrer que je suis capable d'analyser un besoin, 
+                    de proposer et mettre en œuvre une solution informatique, et de communiquer</b> efficacement sur mon travail.
+            </p>
+        </section><br><br>
 
         <section id="about">
             <h1>À PROPOS :</h1>
-            <p>Pres de moi</p>
-        </section>
+            <p>Je m'appelle Aïssetou NIAKATE, et je souhaite en apprendre plus sur l'informatique.
+                Je suis <b>curieuse</b>, <b>proactive</b> et <b>persévérante</b> ce qui me pousse à entreprendre continuellement de nouveaux projets, notamment en autodidacte.
+            </p>
+            <h3>QUI SUIS-JE ?</h3>
+            <p>
+                Je suis passionné par les animes/manga/manwha, 
+                le montage vidéo, le dessin et le volley.<br><br>J'aime découvrir de nouvelles choses et ma nature me motive à entreprendre continuellement de nouveaux projets.
+                C'est en partie grâce à cela que j'ai commencé à entreprendre de manière autodidacte de nouveaux projets de programmation ainsi que apprendre des outils comme la suite Adobe.
+            </p>
+        </section><br><br>
 
         <section id="projects">
             <h1>PROJETS :</h1>
-            <p>Mes projets etc</p>
-        </section>
+            <div class="proj_dev">
+                <h3>MY HUNTER ⌖</h3>
+                <p>Le but de ce projet ? Reproduire un <b>jeu</b> de type Duck Hunter en <b>C à l'aide de la CSFML</b></p>
+                <img src="img/my_hunter.png" alt="img" class="hunter">
+                <img src="img/my_hunter_graphique.png" alt="" class="hunter">
+            </div>
+            <div class="proj_dev">
+                <h3>BSQ : FIND THE BIGGEST SQUARE ☐</h3>
+                <p>Dans ce projet, il fallait <b>trouver</b> le <b>plus grand carré</b> dans une map donnée, pour cela, j'ai utilisé l'algorithme du démineur inversé.</p>
+                <img src="img/bsq.png" alt="img" class="bsq">
+                <img src="img/bsq_code.png" alt="img" class="bsq_code"><br><br>
+
+                <h5>Pour voir plus de projets et de détail, consultez mon CV !</h5>
+            </div>
+        </section><br><br>
 
         <section id="contact">
             <h1>CONTACTS :</h1>
-            <p>Comment me contacter</p>
-            <form>
+            <p><b>Mes informations</b></p>
+            <p><b>Mail :</b> niakateaissetou@gmail.com</p>
+            <p><b>Téléphone : </b>07.68.88.99.77</p><br>
+            <p><b>Me joindre :</b></p>
+        <form>
 	    <label for="firstname">Prénom :</label> <!--ronan hello explication-->
 	    <input type="text" id="firstname" name="firstname" maxlength="20" placeholder="Prénom" required>
 	    <label for="lastname">Nom :</label>
 	    <input type="text" id="lastname" name="lastname" maxlength="20" placeholder="Nom" required>
 	    <label for="email">Adresse email :</label>
-	    <input type="email" id="email" name="adresse mail" placeholder="example@gmail.com" required>
+	    <input type="email" id="email" name="adresse mail" placeholder="exemple@gmail.com" required>
         </form>
-        </section>
+        </section><br><br>
     </main>
 
     <footer>

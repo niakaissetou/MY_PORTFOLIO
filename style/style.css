@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
+
     scroll-behavior: smooth;
 }
 
 body {
+
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 100;
     margin: 0;
@@ -13,6 +15,7 @@ body {
 }
 
 .navigation {
+
     font-family: 'Space Mono', monospace;
     font-size: 1.4rem;
     background-color: #474647;
@@ -25,44 +28,53 @@ body {
 }
 
 .nom_page {
+
     font-weight: 700;
     color: #F0EDEE;
 }
 
 .nav_links {
+
     display: flex;
     gap: 2rem;
 }
 
 .nav_links a {
+
     text-decoration: none;
-    color: #000000;
+    color: #F0EDEE;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav_links a:hover {
+
     color: #412fe0;
 }
+
 .presentation_perso {
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     font-weight: 400;
-    font-size: clamp(1rem, 2.5vw, 1.6rem);
     margin: 10rem 0rem 10rem 0rem; /*t r b l*/
 
 }
 
 .presentation_perso p {
+
     font-size: 2.5rem;
     text-align: left;
     transition: transform 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .presentation_perso p:hover {
+
+    overflow: hidden; /*marche pas meme avec relative d'apres stack*/
     transform: scale(1.1);
 }
 
@@ -80,27 +92,24 @@ body {
     height: auto;
     display: block;
     margin: 2rem auto;
-    animation: float_flip 7s linear infinite;
+    animation: float_flip 6s linear infinite;
     transform-origin: center;
 }
-/* 
-.mon_logo:hover {
-    animation: float_flip 5s linear infinite;
-    transform-origin: center;
-} */
+
 
 @keyframes float_flip {
+
     0% {
         transform: translateY(0) rotateY(0deg);
     }
     25% {
-        transform: translateY(-10px) rotateY(90deg);
+        transform: translateY(-1.5rem) rotateY(90deg);
     }
     50% {
         transform: translateY(0) rotateY(180deg);
     }
     75% {
-        transform: translateY(10px) rotateY(270deg);
+        transform: translateY(1.5rem) rotateY(270deg);
     }
     100% {
         transform: translateY(0) rotateY(360deg);
@@ -111,13 +120,23 @@ body {
 
     max-width: 3rem;
     max-height: auto;
+    animation: rotation 15s linear infinite;
+}
+
+@keyframes rotation {
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .line_deco {
 
     display: flex;
+    position: relative;
     justify-content: space-around;
     margin-bottom: 5rem;
+    z-index: -1;
 }
 
 h1:hover {
@@ -140,7 +159,7 @@ h1:hover {
 .resume_button:hover {
     color: #F0EDEE;
     background-color: #412fe0;
-    border-color: #00000000;
+    border-color: #474647;
     transition: background-color 1s;
 }
 
@@ -152,6 +171,45 @@ main {
 }
 
 footer {
-    margin: 0 0 3rem 3rem;
+    margin: 3rem 0 3rem 3rem;
 }
 
+#play_music { /*cible l'id avec # au lieu d'une class avec ., c'est plus precis de ce que j'ai compris*/
+        
+    background: linear-gradient(45deg, #ffb6e2, #412fe0);
+        color: white;
+        border: none;
+        border-radius: 1.2rem;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 0.5rem 1rem rgba(121, 121, 121, 0.2);
+}
+
+#play_music:hover {
+
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1.1rem rgba(121, 121, 121, 0.2);
+}
+
+#epreuve, #about {
+
+    max-width: 110rem;
+}
+
+.bsq {
+
+    max-width: 35rem;
+    margin-right: 5rem;
+}
+
+.bsq_code {
+    max-width: 30rem;
+}
+
+.hunter {
+    max-width: 35rem;
+    margin-right: 5rem;
+}
