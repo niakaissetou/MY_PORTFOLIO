@@ -14,6 +14,11 @@ body {
     background-color: #F0EDEE;
 }
 
+section {
+
+    scroll-margin-top: 5rem;
+}
+
 .navigation {
 
     font-family: 'Space Mono', monospace;
@@ -25,6 +30,7 @@ body {
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 .nom_page {
@@ -55,13 +61,12 @@ body {
 .presentation_perso {
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     font-weight: 400;
-    margin: 10rem 0rem 10rem 0rem; /*t r b l*/
-
+    margin: 10rem 2rem 2rem 2rem;
+    gap: 20rem;
 }
 
 .presentation_perso p {
@@ -69,16 +74,15 @@ body {
     font-size: 2.5rem;
     text-align: left;
     transition: transform 0.5s ease-in-out;
-    overflow: hidden;
 }
 
 .presentation_perso p:hover {
 
-    overflow: hidden; /*marche pas meme avec relative d'apres stack*/
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .mon_logo {
+
     max-width: 20rem;
     width: 100%;
     height: auto;
@@ -96,44 +100,29 @@ body {
     transform-origin: center;
 }
 
-
 @keyframes float_flip {
 
-    0% {
-        transform: translateY(0) rotateY(0deg);
-    }
-    25% {
-        transform: translateY(-1.5rem) rotateY(90deg);
-    }
-    50% {
-        transform: translateY(0) rotateY(180deg);
-    }
-    75% {
-        transform: translateY(1.5rem) rotateY(270deg);
-    }
-    100% {
-        transform: translateY(0) rotateY(360deg);
-    }
+    0%   { transform: translateY(0) rotateY(0deg); }
+    25%  { transform: translateY(-1.5rem) rotateY(90deg); }
+    50%  { transform: translateY(0) rotateY(180deg); }
+    75%  { transform: translateY(1.5rem) rotateY(270deg); }
+    100% { transform: translateY(0) rotateY(360deg); }
 }
 
 .deco {
 
     max-width: 3rem;
-    max-height: auto;
     animation: rotation 15s linear infinite;
 }
 
 @keyframes rotation {
 
-    100% {
-        transform: rotate(360deg);
-    }
+    100% { transform: rotate(360deg); }
 }
 
 .line_deco {
 
     display: flex;
-    position: relative;
     justify-content: space-around;
     margin-bottom: 5rem;
     z-index: -1;
@@ -147,45 +136,44 @@ h1:hover {
 .resume_button {
 
     display: flex;
-    margin: 0rem 0rem 10rem 10rem;
     font-size: 1.5rem;
-    background-color: #00000000;
+    background-color: transparent;
     border-radius: 0.6rem;
-    padding: 1%;
-    border-color: #474647;
-    transition: background-color 1s;
+    padding: 0.5rem 1rem;
+    border: 2px solid #474647;
+    transition: all 0.3s ease;
+    margin: 2rem 0;
 }
 
 .resume_button:hover {
+
     color: #F0EDEE;
     background-color: #412fe0;
-    border-color: #474647;
-    transition: background-color 1s;
 }
 
 main {
-    
+
     display: flex;
     flex-direction: column;
-    margin-left: 3%;
+    margin: 2rem;
 }
 
 footer {
-    margin: 3rem 0 3rem 3rem;
+    margin: 3rem 2rem;
 }
 
-#play_music { /*cible l'id avec # au lieu d'une class avec ., c'est plus precis de ce que j'ai compris*/
-        
+#play_music {
+
     background: linear-gradient(45deg, #ffb6e2, #412fe0);
-        color: white;
-        border: none;
-        border-radius: 1.2rem;
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 0.5rem 1rem rgba(121, 121, 121, 0.2);
+    color: white;
+    border: none;
+    border-radius: 1.2rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.5rem 1rem rgba(121, 121, 121, 0.2);
 }
 
 #play_music:hover {
@@ -194,22 +182,117 @@ footer {
     box-shadow: 0 0.5rem 1.1rem rgba(121, 121, 121, 0.2);
 }
 
-#epreuve, #about {
+#epreuve, #about, #veille, #projects, #contact {
 
-    max-width: 110rem;
+    max-width: 100%;
+    padding: 2rem 1rem 7rem 1rem;
 }
 
-.bsq {
+.cv_pfp {
 
-    max-width: 35rem;
-    margin-right: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 10rem;
 }
 
-.bsq_code {
-    max-width: 30rem;
+.cv_pfp img {
+
+    border-radius: 50%;
+    max-width: 7rem;
+    width: 100%;
 }
 
-.hunter {
-    max-width: 35rem;
-    margin-right: 5rem;
+.tableau_e5 {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+    background-color: #dfdcf3;
+    border: 2px solid #412fe0;
+}
+
+.tableau_e5 th {
+
+    background-color: #412fe0;
+    color: white;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.tableau_e5 td {
+
+    padding: 0.5rem;
+    border: 1px solid #c9c6ef;
+}
+
+.tableau_e5 tr:nth-child(even) {
+    background-color: #f4f3fc;
+}
+
+/* voir les bookmark stack et w3school */
+/* You have the :nth-child() pseudo-class:
+
+css
+
+table tr:nth-child(odd) td{
+    ...
+}
+table tr:nth-child(even) td{
+    ...
+} */
+
+.bsq, .bsq_code, .hunter {
+
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 45rem;
+    margin: 1rem 0;
+}
+
+#veille {
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 5rem;
+    background-color: #dfdcf3;
+    border: 2px dotted #6a62a1;
+}
+
+#veille h1, #veille h3 {
+    color: #474647;
+}
+
+.color_text {
+    color: #6a62a1;
+}
+
+@media (max-width: 45rem) {
+    .nav_links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .presentation_perso {
+        flex-direction: column;
+        margin: 5rem 1rem 2rem 1rem;
+    }
+
+    .cv_pfp {
+        margin-left: 0;
+    }
+
+    .resume_button {
+        margin-left: 0;
+    }
+
+    .bsq, .bsq_code, .hunter {
+        max-width: 90%;
+        margin-right: 0;
+    }
+
+    .floating img {
+        width: 8rem;
+    }
 }

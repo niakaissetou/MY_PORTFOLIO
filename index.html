@@ -1,110 +1,179 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script src="js/main.js" defer></script>
-</head>
-<body>
-    <nav class="navigation">
-        <div class="nom_page">MON PORTFOLIO</div>
-        <div class="nav_links">
-            <a href="#home">HOME</a>
-            <a href="#about">À PROPOS</a>
-            <a href="#projects">PROJETS</a>
-            <a href="#contact">CONTACTS</a>
-        </div> 
-        <button id="play_music">Un peu de musique ?</button>
-        <audio autoplay id="tomodachi">
-            <source src="song/Map (Day) - Tomodachi Life OST.mp3" type="audio/mp3">
-        </audio>
-    </nav>
-        <section id="home" class="presentation_perso">
-            <p>BONJOUR, JE SUIS <b>AÏSSETOU NIAKATÉ.</b><br>UNE DÉVELOPPEUSE EN FORMATION,<br> À LA RECHERCHE D'UN STAGE !</p>
-            <div class="floating">
-                <img src="img/MONOGRAMME.png" alt="MONOGRAMME" class="mon_logo">
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style/style.css">
+        <script src="js/main.js" defer></script>
+    </head>
+    <body>
+        <nav class="navigation">
+            <div class="nom_page">MON PORTFOLIO</div>
+            <div class="nav_links">
+                <a href="#home">HOME</a>
+                <a href="#epreuve">E5</a>
+                <a href="#about">À PROPOS</a>
+                <a href="#veille">VEILLE</a>
+                <a href="#projects">PROJETS</a>
+                <a href="#contact">CONTACTS</a>
+            </div> 
+            <button id="play_music">Un peu de musique ?</button>
+            <audio autoplay id="tomodachi">
+                <source src="song/Map (Day) - Tomodachi Life OST.mp3" type="audio/mp3">
+            </audio>
+        </nav>
+            <section id="home" class="presentation_perso">
+                <p>BIENVENUE, JE SUIS <b>AÏSSETOU NIAKATÉ.</b><br>UNE DÉVELOPPEUSE EN FORMATION,<br> À LA RECHERCHE D'UN STAGE !</p>
+                <div class="floating">
+                    <img src="img/MONOGRAMME.png" alt="MONOGRAMME" class="mon_logo">
+                </div>
+            </section>
+            <div class="cv_pfp">            
+                <img src="img/pfp.webp" alt="pfp">
+                <button class="resume_button" onclick="open_pdf()">MON CV !</button>
             </div>
-        </section>
-    <button class="resume_button" onclick="open_pdf()">MON CV !</button>
-    <div class="line_deco">
-        <img src="img/symbole.png" alt="symbole" class="deco">
-        <img src="img/symbole.png" alt="symbole" class="deco">
-        <img src="img/symbole.png" alt="symbole" class="deco">
-        <img src="img/symbole.png" alt="symbole" class="deco">
-        <img src="img/symbole.png" alt="symbole" class="deco">
-        <img src="img/symbole.png" alt="symbole" class="deco">
-        <img src="img/symbole.png" alt="symbole" class="deco">
-        <img src="img/symbole.png" alt="symbole" class="deco">
+        <div class="line_deco">
+            <img src="img/symbole.png" alt="symbole" class="deco">
+            <img src="img/symbole.png" alt="symbole" class="deco">
+            <img src="img/symbole.png" alt="symbole" class="deco">
+            <img src="img/symbole.png" alt="symbole" class="deco">
+            <img src="img/symbole.png" alt="symbole" class="deco">
+            <img src="img/symbole.png" alt="symbole" class="deco">
+            <img src="img/symbole.png" alt="symbole" class="deco">
+            <img src="img/symbole.png" alt="symbole" class="deco">
 
-    </div>
-    <main>
-        <section id="epreuve">
-            <h1>ÉPREUVE ORALE E5 :</h1>
-            <p>Étant actuellement étudiante en <b>BTS SIO</b>, je dois réaliser un oral, <b>l'épreuve E5</b>. Cette épreuve consiste à <b>évaluer</b> mes <b>compétences professionnelles</b> 
-                acquises durant ma formation, mes stages et mes projets. 
-                Elle dure environ quarante minutes et se déroule en deux grandes parties.
-                <br><br>Dans un premier temps, je présente mon parcours, mon rôle en entreprise et les différentes missions que j'ai pu effectuer. 
-                Ensuite, je dois détailler deux réalisations professionnelles que j'ai choisies, en expliquant le contexte, les objectifs, les outils utilisés et les compétences mobilisées.
-                Le jury me pose ensuite des questions pour vérifier ma compréhension des situations professionnelles, 
-                mes choix techniques et ma capacité à m'adapter aux besoins d'une organisation.
-                <br><br><b>L'objectif</b> de cette épreuve est de <b>montrer que je suis capable d'analyser un besoin, 
-                    de proposer et mettre en œuvre une solution informatique, et de communiquer</b> efficacement sur mon travail.
-            </p>
-        </section><br><br>
+        </div>
+        <main>
+            <section id="epreuve">
+                <h1>ÉPREUVE ORALE E5 :</h1>
+                <div class="E5">
+                    <p>Je suis actuellement en <b>1ère année de BTS SIO</b> et dois réaliser un oral, <b>l'épreuve E5</b>. Cette épreuve consiste à <b>évaluer</b> mes <b>compétences professionnelles</b> 
+                        acquises durant ma formation, mes stages et mes projets. 
+                        Elle dure environ quarante minutes et se déroule en deux grandes parties.
+                        <br><br><b>L'objectif</b> de cette épreuve est de <b>montrer que je suis capable d'analyser un besoin, 
+                            de proposer et mettre en œuvre une solution informatique, et de communiquer</b> efficacement sur mon travail.
+                        </p>
+                        <h3>➲ Présentation orale : ~10min</h3>
+                        <p>Présentation du parcours de professionnalisation. Cette présentation doit être structurée et mettre en évidence : <br><br>
+                            ✤ Vos expériences les plus significatives <br>
+                            ✤ Les compétences clés que vous avez acquises <br>
+                            ✤ Votre analyse des situations professionnelles <br>
+                            ✤ Votre capacité à vous projeter professionnellement <br>
+                        </p>
+                        <h3>➲  Entretien avec le jury : ~30 min</h3>
+                        <p>Le jury vous interroge sur différents aspects de votre parcours : <br> <br>
+                            ✤ Questions sur les activités présentées <br>
+                            ✤ Approfondissement des compétences évoquées <br>
+                            ✤ Évaluation de votre analyse réflexive <br>
+                            ✤ Discussion sur vos perspectives d'évolution <br>
+                            ✤ Mise en situation professionnelle possible <br>
+                        </p>
+                </div>
+                <h2>Tableau de compétences - Épreuve E5</h2>
+            <table class="tableau_e5">
+                <tr>
+                    <th>Compétence</th>
+                    <th>Description</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td>Analyse des besoins</td>
+                    <td>Comprendre la demande du client et proposer une solution adaptée</td>
+                    <td>Étude du cahier des charges</td>
+                </tr>
+                <tr>
+                    <td>Développement</td>
+                    <td>Concevoir et coder une application fonctionnelle</td>
+                    <td>Création d'un site ou d'une application</td>
+                </tr>
+                <tr>
+                    <td>Gestion de projet</td>
+                    <td>Organiser, planifier et suivre l'avancement d'un projet</td>
+                    <td>Utilisation de Trello, GitHub, etc</td>
+                </tr>
+                <tr>
+                    <td>Documentation</td>
+                    <td>Rédiger des guides clairs pour les utilisateurs et techniciens</td>
+                    <td>Manuel d'installation, documentation technique</td>
+                </tr>
+                <tr>
+                    <td>Communication</td>
+                    <td>Présenter son travail de manière claire et professionnelle</td>
+                    <td>Présentation orale fluide et structurée</td>
+                </tr>
+                <tr>
+                    <td>Travail en équipe & veille</td>
+                    <td>Collaborer efficacement et se tenir informé des évolutions</td>
+                    <td>Partage sur GitHub, veille technologique</td>
+                </tr>
+            </table>
 
-        <section id="about">
-            <h1>À PROPOS :</h1>
-            <p>Je m'appelle Aïssetou NIAKATE, et je souhaite en apprendre plus sur l'informatique.
-                Je suis <b>curieuse</b>, <b>proactive</b> et <b>persévérante</b> ce qui me pousse à entreprendre continuellement de nouveaux projets, notamment en autodidacte.
-            </p>
-            <h3>QUI SUIS-JE ?</h3>
-            <p>
-                Je suis passionné par les animes/manga/manwha, 
-                le montage vidéo, le dessin et le volley.<br><br>J'aime découvrir de nouvelles choses et ma nature me motive à entreprendre continuellement de nouveaux projets.
-                C'est en partie grâce à cela que j'ai commencé à entreprendre de manière autodidacte de nouveaux projets de programmation ainsi que apprendre des outils comme la suite Adobe.
-            </p>
-        </section><br><br>
+            </section><br><br>
+            
+            <section id="about">
+                <h1>À PROPOS :</h1>
+                <p>Je m'appelle Aïssetou NIAKATE, j'ai 21 ans et je souhaite en apprendre plus sur l'informatique.
+                    Je suis <b>curieuse</b>, <b>proactive</b> et <b>persévérante</b> ce qui me pousse à entreprendre continuellement de nouveaux projets, notamment en autodidacte.
+                </p>
+                <h3 class="color_text">QUI SUIS-JE ?</h3>
+                <p>
+                    Je suis passionné par les <b>animes/manga/manwha</b>, 
+                    le <b>montage vidéo, le dessin et le volley</b>.<br><br>J'aime découvrir de nouvelles choses et ma nature me motive à entreprendre continuellement de nouveaux projets.
+                    C'est en partie grâce à cela que j'ai commencé à entreprendre de nouveaux projets de programmation ainsi qu'apprendre des outils comme la suite Adobe.
+                </p>
+            </section><br><br>
 
-        <section id="projects">
-            <h1>PROJETS :</h1>
-            <div class="proj_dev">
-                <h3>MY HUNTER ⌖</h3>
-                <p>Le but de ce projet ? Reproduire un <b>jeu</b> de type Duck Hunter en <b>C à l'aide de la CSFML</b></p>
-                <img src="img/my_hunter.png" alt="img" class="hunter">
-                <img src="img/my_hunter_graphique.png" alt="" class="hunter">
-            </div>
-            <div class="proj_dev">
-                <h3>BSQ : FIND THE BIGGEST SQUARE ☐</h3>
-                <p>Dans ce projet, il fallait <b>trouver</b> le <b>plus grand carré</b> dans une map donnée, pour cela, j'ai utilisé l'algorithme du démineur inversé.</p>
-                <img src="img/bsq.png" alt="img" class="bsq">
-                <img src="img/bsq_code.png" alt="img" class="bsq_code"><br><br>
+            <section id="veille">
+                <h1>VEILLE TECHNOLOGIQUE</h1>
+                <h3>Sujet : Technologies mobiles et responsive design</h3>
+                <p>Je me tiens informée des bonnes pratiques pour rendre les sites web adaptés aux différents types d'écrans : 
+                   ordinateurs, tablettes et smartphones. <br>
+                   Cette veille me permet d'améliorer l'expérience utilisateur et de garantir que mes projets sont accessibles sur tous les appareils. <br> <br>
+                    ✤ Exemple d'outil : Media queries CSS, Flexbox <br>
+                    ✤ Exemple d'utilisation : ajustement automatique des mises en page et des éléments graphiques selon la taille de l'écran</p>
+            </section> <br><br>
 
-                <h5>Pour voir plus de projets et de détail, consultez mon CV !</h5>
-            </div>
-        </section><br><br>
 
-        <section id="contact">
-            <h1>CONTACTS :</h1>
-            <p><b>Mes informations</b></p>
-            <p><b>Mail :</b> niakateaissetou@gmail.com</p>
-            <p><b>Téléphone : </b>07.68.88.99.77</p><br>
-            <p><b>Me joindre :</b></p>
-        <form>
-	    <label for="firstname">Prénom :</label> <!--ronan hello explication-->
-	    <input type="text" id="firstname" name="firstname" maxlength="20" placeholder="Prénom" required>
-	    <label for="lastname">Nom :</label>
-	    <input type="text" id="lastname" name="lastname" maxlength="20" placeholder="Nom" required>
-	    <label for="email">Adresse email :</label>
-	    <input type="email" id="email" name="adresse mail" placeholder="exemple@gmail.com" required>
-        </form>
-        </section><br><br>
-    </main>
+                
+            <section id="projects">
+                <h1>PROJETS :</h1>
+                <div class="proj_dev">
+                    <h3>MY HUNTER ⌖</h3>
+                    <p>Le but de ce projet ? Reproduire un <b>jeu</b> de type Duck Hunter en <b>C à l'aide de la CSFML</b></p>
+                    <img src="img/my_hunter.png" alt="img" class="hunter">
+                    <img src="img/my_hunter_graphique.png" alt="" class="hunter">
+                </div>
+                <div class="proj_dev">
+                    <h3>BSQ : FIND THE BIGGEST SQUARE ☐</h3>
+                    <p>Dans ce projet, il fallait <b>trouver</b> le <b>plus grand carré</b> dans une map donnée, pour cela, j'ai utilisé l'algorithme du démineur inversé.</p>
+                    <img src="img/bsq.png" alt="img" class="bsq">
+                    <img src="img/bsq_code.png" alt="img" class="bsq_code"><br><br>
 
-    <footer>
-        <p>© 2025 Aïssetou NIAKATÉ</p>
-    </footer>
-</body>
-</html>
+                    <h5>Pour voir plus de projets et de détail, consultez mon CV !</h5>
+                </div>
+            </section><br><br>
+
+            <section id="contact">
+                <h1>CONTACTS :</h1>
+                <p><b>Mes informations</b></p>
+                <p><b>Mail :</b> niakateaissetou@gmail.com</p>
+                <p><b>Téléphone : </b>07.68.88.99.77</p><br>
+                <p><b>Me joindre :</b></p>
+            <form>
+            <label for="firstname">Prénom :</label> <!--ronan hello explication-->
+            <input type="text" id="firstname" name="firstname" maxlength="20" placeholder="Prénom" required>
+            <label for="lastname">Nom :</label>
+            <input type="text" id="lastname" name="lastname" maxlength="20" placeholder="Nom" required>
+            <label for="email">Adresse email :</label>
+            <input type="email" id="email" name="adresse mail" placeholder="exemple@gmail.com" required>
+            </form>
+            </section><br><br>
+        </main>
+
+        <footer>
+            <p>© 2025 Aïssetou NIAKATÉ</p>
+        </footer>
+    </body>
+    </html>
 
